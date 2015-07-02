@@ -1,0 +1,22 @@
+{
+  "name": "shopify-starter",
+  "version": "1.0.0",
+  "description": "Shopify starter theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdn90/shopify-starter.git"
+  },
+  "keywords": [
+    "Shopify"
+  ],
+  "author": "Steven Nguyen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sdn90/shopify-starter/issues"
+  },
+  "homepage": "https://github.com/sdn90/shopify-starter#readme"
+}
