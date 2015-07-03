@@ -2,9 +2,13 @@
 <html>
   <head>
     <title></title>
+    {{ 'main.min.css' | asset_url | stylesheet_tag }}
     {{ content_for_head }}
   </head>
   <body>
     {{ content_for_layout }}
+
+    {{ 'vendor.bundle.min.js' | asset_url | script_tag }}
+    {{ 'bundle.min.js' | asset_url | script_tag}}
   </body>
 </html>
