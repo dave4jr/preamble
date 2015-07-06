@@ -1,14 +1,16 @@
 <!doctype html>
 <html>
   <head>
-    <title></title>
-    {{ 'main.min.css' | asset_url | stylesheet_tag }}
+    <title>
+      {{ page_title }}{% if current_tags %}{% assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+    </title>
+    {{ 'main.css' | asset_url | stylesheet_tag }}
     {{ content_for_head }}
   </head>
   <body>
     {{ content_for_layout }}
 
-    {{ 'vendor.bundle.min.js' | asset_url | script_tag }}
-    {{ 'bundle.min.js' | asset_url | script_tag}}
+    {{ 'vendor.bundle.js' | asset_url | script_tag }}
+    {{ 'bundle.js' | asset_url | script_tag}}
   </body>
 </html>
