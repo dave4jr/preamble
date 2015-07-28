@@ -1,5 +1,5 @@
 # WIP... Use at your own risk
-# Shopify Starter
+# Preamble
 An opinionated boilerplate theme for Shopify using ES6/ES2015 and CSS4.
 
 Out the box it comes with:
