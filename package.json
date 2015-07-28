@@ -1,5 +1,5 @@
 {
-  "name": "shopify-starter",
+  "name": "preamble",
   "version": "1.0.0",
   "description": "Shopify starter theme",
   "main": "index.js",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sdn90/shopify-starter.git"
+    "url": "git+https://github.com/sdn90/preamble.git"
   },
   "keywords": [
     "Shopify"
@@ -20,9 +20,9 @@
   "author": "Steven Nguyen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sdn90/shopify-starter/issues"
+    "url": "https://github.com/sdn90/preamble/issues"
   },
-  "homepage": "https://github.com/sdn90/shopify-starter#readme",
+  "homepage": "https://github.com/sdn90/preamble#readme",
   "dependencies": {
     "normalize.css": "^3.0.3"
   },
