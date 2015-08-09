@@ -1,12 +1,5 @@
-# WIP... Use at your own risk
 # Preamble
-An opinionated boilerplate theme for Shopify using ES6/ES2015 and CSS4.
-
-Out the box it comes with:
-
-* ES6/ES2015 using Babel/Webpack
-* CSS4 using cssnext
-* Basscss
+An opinionated Shopify boilerplate theme.
  
 ## Installation
 1. Clone the repo  
@@ -17,16 +10,3 @@ Out the box it comes with:
 
 3. Watch your CSS/JS files for changes  
 `$ npm run watch`
-
-
-### Snippet naming convention
-Snippet files should be prefixed with the template they are used on.
-
-```bash
-|-- snippets
-|   |-- collection-item.liquid
-|   |-- product-images-gallery.liquid
-|   |-- theme-searchbar.liquid
-|   |-- theme-header.liquid
-|   |-- theme-footer.liquid
-```
