@@ -1,17 +1,3 @@
-# Preamble
-An opinionated Shopify boilerplate theme.
- 
-## Installation
-1. Clone the repo  
-`$ git clone https://github.com/sdn90/preamble`
-
-2. Install the dependencies  
-`$ cd preamble && npm install`
-
-3. Watch your CSS/JS files for changes  
-`$ npm run watch`
-
-## License
 The MIT License (MIT)
 
 Copyright (c) 2015 Steven Nguyen
