@@ -8,7 +8,7 @@ Creates a global constant 'product' with the product's JSON object
 {% endcomment %}
 <script>
 Object.defineProperties(window, {
-  product: {
+  __PRODUCT__: {
     value: {{ product | json }},
     enumerable: true
   }
