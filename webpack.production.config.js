@@ -22,10 +22,8 @@ module.exports = {
     extensions: ['', '.js', '.jsx']
   },
   plugins: [
-    new webpack.ProvidePlugin({
-      'es6-promise': 'es6-promise',
-      'fetch': 'imports?this=>window!exports?window.fetch!whatwg-fetch'
-    }),
+    new webpack.optimize.UglifyJSPlugin(),
+    new webpack.optimizeDedupePlugin(),
     new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js')
   ],
 };

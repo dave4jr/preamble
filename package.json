@@ -4,11 +4,12 @@
   "description": "Shopify starter theme",
   "main": "index.js",
   "scripts": {
-    "build": "NODE_ENV=production npm run css && npm run js:production",
-    "css": "cssnext ./css/main.css ./assets/main.css",
-    "js": "webpack --progress --colors",
-    "js:production": "webpack --progress --colors -p",
-    "watch:css": "cssnext --watch --verbose ./css/main.css ./assets/main.css",
+    "build": "NODE_ENV=production npm run css:production && npm run js:production",
+    "css:dev": "cssnext --sourcemap ./css/main.css ./assets/main.css.liquid",
+    "css:production": "cssnext --compress ./css/main.css ./assets/main.css.liquid",
+    "js:dev": "webpack --config webpack.config.js --progress --colors",
+    "js:production": "webpack --config webpack.production.config.js --progress --colors",
+    "watch:css": "cssnext --watch --verbose ./css/main.css ./assets/main.css.liquid",
     "watch:js": "webpack --progress --colors --watch",
     "watch": "npm run watch:css & npm run watch:js"
   },
