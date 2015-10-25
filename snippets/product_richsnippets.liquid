@@ -9,8 +9,13 @@
     <meta itemprop="availability" content="http://schema.org/InStock" />
     <meta itemprop="itemCondition" content="http://schema.org/NewCondition" />
   </div>
+  {% comment %}
+  Reviews - Uncomment and edit the next block to add reviews.
+  {% endcomment %}
+  {% comment %}
   <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
     <meta itemprop="ratingValue" content="{{ product.metafields.yotpo.reviews_average }}" />
     <meta itemprop="reviewCount" content="{{ product.metafields.yotpo.reviews_count }}" />
   </div>
+  {% endcomment %}
 </div>
