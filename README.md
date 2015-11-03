@@ -1,4 +1,5 @@
 [![Dependency Status](https://david-dm.org/sdn90/preamble.svg)](https://david-dm.org/sdn90/preamble)
+[![devDependency Status](https://david-dm.org/sdn90/preamble/dev-status.svg)](https://david-dm.org/sdn90/preamble#info=devDependencies)
 
 # Preamble
 An opinionated Shopify boilerplate theme.
