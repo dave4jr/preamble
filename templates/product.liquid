@@ -2,17 +2,4 @@
   <h1>{{ product.title }}</h1>
   <p>{{ product.description }}</p>
 </div>
-
-{% comment %}
-Creates a global constant 'product' with the product's JSON object
-{% endcomment %}
-<script>
-Object.defineProperties(window, {
-  __PRODUCT__: {
-    value: {{ product | json }},
-    enumerable: true
-  }
-});
-</script>
-
 {% include 'product_richsnippets' %}
