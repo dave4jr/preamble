@@ -1,10 +1,7 @@
 var webpack = require('webpack');
 
 module.exports = {
-  entry: {
-    app: './js/main.js',
-    vendor: [],
-  },
+  entry: './js/main.js',
   output: {
     filename: 'bundle.js',
     path: './assets/'
@@ -24,6 +21,5 @@ module.exports = {
   plugins: [
     new webpack.optimize.UglifyJSPlugin(),
     new webpack.optimizeDedupePlugin(),
-    new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js')
   ],
 };

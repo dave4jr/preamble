@@ -4,8 +4,27 @@
 [![devDependency Status](https://david-dm.org/sdn90/preamble/dev-status.svg)](https://david-dm.org/sdn90/preamble#info=devDependencies)
 
 # Preamble
-An opinionated Shopify boilerplate theme.
- 
+
+* Bring your own CSS preprocessor
+* Bring your own Javascript and CSS frameworks
+* npm run scripts. No task runner included.
+
+## What's included?
+
+* Babel
+* PostCSS
+* Webpack
+
+### Preamble Libraries
+
+##### preamble-utils
+A modular utility library for manipulating JSON data from Liquid e.g. `{{ product | json }}`
+
+##### preamble-ajax
+A Promise based Shopify AJAX API client library
+
+**Note:** These libraries are installed by default as a convenience. There is no code that relies on these libraries. If you prefer to use a different library such as Shopify's jQuery wrapper, you can safely remove the `import` statements from `js/main.js` and `package.json` with no side effects.
+
 ## Installation
 1. Clone the repo  
 `$ git clone https://github.com/sdn90/preamble`
@@ -13,8 +32,30 @@ An opinionated Shopify boilerplate theme.
 2. Install the dependencies  
 `$ cd preamble && npm install`
 
-3. Watch your CSS/JS files for changes  
+3. Watch your CSS/JS files for changes   
 `$ npm run watch`
+
+## How to use
+In depth guides coming soon...
+
+## Liquid in Javascript and CSS
+Liquid in Javascript and CSS is **currently NOT supported**. If Liquid is a hard requirement for your project, you should create a separate file in the `/assets` directory and include it in your theme so it doesn't get processed by the build tools.
+
+You should **avoid using Liquid in Javascript** as a whole as it generally makes it harder to test. You should store Liquid objects as a global/window variable in your Liquid files then reference that variable in your Javascript.
+
+```liquid
+{% comment %}
+/templates/product.liquid
+
+Place before your Javascript is loaded.
+{% endcomment %}
+
+<script>
+var __PRODUCT__ = {{ product | json }};
+
+// You can now reference __PRODUCT__ in your Javascript files 
+</script>
+```
 
 ## License
 The MIT License (MIT)

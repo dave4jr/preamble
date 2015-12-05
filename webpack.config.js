@@ -1,10 +1,7 @@
 var webpack = require('webpack');
 
 module.exports = {
-  entry: {
-    app: './js/main.js',
-    vendor: []
-  },
+  entry: './js/main.js',
   output: {
     filename: 'bundle.js',
     path: './assets/'
@@ -21,8 +18,5 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
-  plugins: [
-    new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js')
-  ],
   devtool: 'inline-source-map'
 };
