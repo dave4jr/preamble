@@ -11,11 +11,18 @@
   </div>
   {% comment %}
   Reviews - Uncomment and edit the next block to add reviews.
+  You need to change the content tag depending on what reviews app
+  you are using.
+
+  For example, Yotpo's metafields are
+  {{ product.metafields.yotpo.reviews_average }}
+  {{ product.metafields.yotpo.reviews_count }}
   {% endcomment %}
+
   {% comment %}
   <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-    <meta itemprop="ratingValue" content="{{ product.metafields.yotpo.reviews_average }}" />
-    <meta itemprop="reviewCount" content="{{ product.metafields.yotpo.reviews_count }}" />
+    <meta itemprop="ratingValue" content="" />
+    <meta itemprop="reviewCount" content="" />
   </div>
   {% endcomment %}
 </div>
