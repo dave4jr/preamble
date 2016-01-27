@@ -3,12 +3,14 @@
   <head>
     {% include 'theme-title' %}
     {{ 'main.css' | asset_url | stylesheet_tag }}
+
+    {% include 'theme-meta-tags' %}
     {{ content_for_head }}
   </head>
   <body>
     {{ content_for_layout }}
 
-    {% include 'js-globals' %}
+    {% include 'theme-js-globals' %}
     <script src="{{ 'bundle.js' | asset_url }}"></script>
   </body>
 </html>

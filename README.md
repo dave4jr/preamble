@@ -5,10 +5,6 @@
 
 # Preamble
 
-* Bring your own CSS preprocessor
-* Bring your own Javascript and CSS frameworks
-* npm run scripts. No task runner included.
-
 ## What's included?
 
 * Babel
@@ -56,6 +52,13 @@ var __PRODUCT__ = {{ product | json }};
 // You can now reference __PRODUCT__ in your Javascript files 
 </script>
 ```
+
+## NPM All The Things
+ f
+Libraries such as Bootstrap and normalize.css have started adopting the `style` key in their respective `package.json` files. Using `postcss-import`, we can point to Node modules via `@import`.
+
+## IE9ish+ Support
+IE8 is not supported
 
 ## License
 The MIT License (MIT)

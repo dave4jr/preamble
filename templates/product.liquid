@@ -1,5 +1,13 @@
 <div>
   <h1>{{ product.title }}</h1>
   <p>{{ product.description }}</p>
+  <select>
+    {% for variant in product.variants %}
+      <option value="{{ variant.id }}">
+        {{ variant.title }} - {{ variant.price }}
+      </option>
+    {% endfor %}
+  </select>
 </div>
-{% include 'product_richsnippets' %}
+
+

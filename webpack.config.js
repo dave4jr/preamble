@@ -1,6 +1,7 @@
 var webpack = require('webpack');
+var deepAssign = require('deep-assign');
 
-module.exports = {
+var baseConfig = {
   entry: './js/main.js',
   output: {
     filename: 'bundle.js',
@@ -17,6 +18,25 @@ module.exports = {
   },
   resolve: {
     extensions: ['', '.js', '.jsx']
-  },
-  devtool: 'inline-source-map'
+  }
 };
+
+var devConfig = {
+  devtool: 'cheap-eval-source-map'
+};
+
+var productionConfig = {
+  devtool: 'source-map',
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin(),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.DefinePlugin({
+      "process.env": {
+        "NODE_ENV": JSON.stringify("production")
+      }
+    })
+  ]
+};
+
+module.exports.dev = deepAssign(devConfig, baseConfig);
+module.exports.production = deepAssign(productionConfig, baseConfig);
