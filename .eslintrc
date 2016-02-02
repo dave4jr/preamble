@@ -17,7 +17,6 @@
     "strict": [2, "never"],
 
     // Code style
-    "indent": [2, 2],
-    "quotes": [2, "double"]
+    "indent": [2, 2]
   }
 }
